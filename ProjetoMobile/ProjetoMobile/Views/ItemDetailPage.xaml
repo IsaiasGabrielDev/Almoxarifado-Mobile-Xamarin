@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoMobile.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Id: " FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Id}"  FontSize="Micro" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Nome:" FontSize="Small" FontAttributes="Bold" />
+                <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Nome}" FontSize="Small"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Quantidade:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="2" Grid.Column="1"  Text="{Binding Quantidade}" FontSize="Small"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Lote:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="3" Grid.Column="1"  Text="{Binding Lote}" FontSize="Small"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Data de Fabricação:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="4" Grid.Column="1"  Text="{Binding Datafabricacao, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Data de Vencimento:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="5" Grid.Column="1"  Text="{Binding Datavencimento, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small"/>
+                <Label Grid.Row="6" Grid.Column="0" Text="Função:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="6" Grid.Column="1"  Text="{Binding Funcao}" FontSize="Small"/>
+                <Label Grid.Row="7" Grid.Column="0" Text="Preço de Custo:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="7" Grid.Column="1"  Text="{Binding Precocusto}" FontSize="Small"/>
+                <Label Grid.Row="8" Grid.Column="0" Text="Preço de Venda:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="8" Grid.Column="1"  Text="{Binding Precovendas}" FontSize="Small"/>
+                <Label Grid.Row="9" Grid.Column="0" Text="Alocado:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="9" Grid.Column="1"  Text="{Binding Alocado}" FontSize="Small"/>
+                <Label Grid.Row="10" Grid.Column="0" Text="Nome Alocado:" FontSize="Small" FontAttributes="Bold"/>
+                <Label Grid.Row="10" Grid.Column="1"  Text="{Binding Nomealocado}" FontSize="Small"/>
+            </Grid>
+                                 
+            
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

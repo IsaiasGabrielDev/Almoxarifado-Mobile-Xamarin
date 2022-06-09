@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:projetomobile="clr-namespace:ProjetoMobile"
+             mc:Ignorable="d"
+             x:Class="ProjetoMobile.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#21395b">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center" >
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="Almoxarifado" FontSize="25" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                <Label Grid.Row="1" Text="Login" FontSize="25" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                <Label Grid.Row="2" Text="Usuário:" FontSize="15" TextColor="Gray" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                <projetomobile:RoundedEntry Grid.Row="2" Text="{Binding Email}" Placeholder="Insira o E-mail" VerticalTextAlignment="Center" TextColor="White" PlaceholderColor="White"></projetomobile:RoundedEntry>
+                <Label Grid.Row="5" Text="Senha:" FontSize="15"  TextColor="Gray" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                <projetomobile:RoundedEntry Grid.Row="4" Text="{Binding Senha}" Placeholder="Por favor, insira a senha" FontFamily="" VerticalTextAlignment="Center" TextColor="White" PlaceholderColor="White" IsPassword="True"></projetomobile:RoundedEntry>
+                <Label Grid.Row="6" Text="Registre-se" FontSize="15"  TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"/>
+                <Button Grid.Row="6" HorizontalOptions="EndAndExpand" BorderRadius="6" VerticalOptions="End" Text="Entrar" HeightRequest="40" WidthRequest="100" BackgroundColor="DarkRed" Command="{Binding LoginCommand}"/>
+                <Image Grid.Row="8"  Margin="60,20,0,0" Source="exclamation.png" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="25" IsVisible="{Binding Imgfailvisible}"/>
+                <Label Grid.Row="8" Margin="40,0,0,0" FontSize="15"  TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Text="Senha ou usuário incorretos." IsVisible="{Binding Lbfailvisible}"/>
+            </Grid>
+            
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>
