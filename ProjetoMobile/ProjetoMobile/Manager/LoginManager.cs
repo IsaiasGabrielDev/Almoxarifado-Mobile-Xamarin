@@ -15,6 +15,7 @@ namespace ProjetoMobile.Manager
             var resp = await solicitacaoService.PostAsync<Usuario>("http://10.0.2.2:3000/login", usuario);
 
             return resp;
+
         }       
     }
 }
